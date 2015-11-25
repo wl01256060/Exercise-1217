@@ -21,7 +21,7 @@ void draw()
     if (isLastWaterWithinFlower(i)) {
       addFlowerHp(i,5);
     }
-    drawFlower(50 + i * 80, height - flower_danger.height , flower_hps[i]);
+    drawFlowerWithHp(i, flower_hps[i]);
   }
 }
 // drawWater() - 主要功能為畫水滴
@@ -40,15 +40,16 @@ void addFlowerHp(int flowerID, int value)
 {
 
 }
+
 // isLastWaterWithinFlower(int flowerID)
 // 這個在問說這朵花的範圍是否與落地的水滴重疊，若有則回傳True，若無則回傳False
 boolean isLastWaterWithinFlower(int flowerID)
 {
 
 }
-// drawFlower(int x, int y,float hpValue)
-// 給x,y位置畫flower，並且也給了擁有hp的flower
-void drawFlower(int x, int y,float hpValue)
+// drawFlowerWithHp(int flowerID,float hpValue)
+// 給flowerID，並且也給了該flower的hpValue，這function功能是要把花畫出來
+void drawFlowerWithHp(int flowerID,float hpValue)
 {
 
 }
