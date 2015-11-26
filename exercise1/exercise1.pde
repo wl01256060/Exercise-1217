@@ -19,8 +19,10 @@ void draw()
   letTheWaterFall();
   for (int i = 0; i < flower_hps.length; ++i) {
     if (isLastWaterWithinFlower(i)) {
-      addFlowerHp(i,5);
+      changeFlowerHp(i,5);
     }
+    //decrease hp everytime
+    changeFlowerHp(i,random(-0.5, 0));
     drawFlowerWithHp(i, flower_hps[i]);
   }
 }
@@ -34,13 +36,12 @@ void letTheWaterFall()
 {
 
 }
-// void addFlowerHp(int flowerID, int value)
-// 參數flowerID為告知第幾個Flower，然後value為要加多少HP
-void addFlowerHp(int flowerID, int value)
+// void changeFlowerHp(int flowerID, int value)
+// 參數flowerID為告知第幾個Flower，然後value為要增加或減少多少HP
+void changeFlowerHp(int flowerID, float value)
 {
 
 }
-
 // isLastWaterWithinFlower(int flowerID)
 // 這個在問說這朵花的範圍是否與落地的水滴重疊，若有則回傳True，若無則回傳False
 boolean isLastWaterWithinFlower(int flowerID)
