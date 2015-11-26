@@ -22,7 +22,7 @@ void draw()
       changeFlowerHp(i,5);
     }
     //decrease hp everytime
-    changeFlowerHp(i,random(-0.5, 0));
+    changeFlowerHp(i,-0.5);
     drawFlowerWithHp(i, flower_hps[i]);
   }
 }
