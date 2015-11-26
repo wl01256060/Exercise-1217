@@ -37,6 +37,11 @@ void draw()
       }
     }
 
+    flower_hps[i]+=-0.5;
+    if (flower_hps[i]<0) {
+      flower_hps[i] = 0;
+    }
+
     if (flower_hps[i] > 80) {
       image(flower_safe, 50 + i * 80, height - flower_danger.height);
     }
